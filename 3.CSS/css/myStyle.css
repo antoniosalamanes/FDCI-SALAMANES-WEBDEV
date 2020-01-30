@@ -1,12 +1,15 @@
- @media(min-width:600px){
+
+/* media queries section */
+@media(min-width:600px){
     body {
         font-family: Arial, Helvetica, sans-serif;
         background-color:   #282828;
-        display:flex
     }
-}
-
-@media(min-width:600px){
+    .colorbuttons {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 5px;
+    }
     .container {
         background-color: #ffffff;
         border: 1px solid black;
@@ -16,31 +19,69 @@
         margin:auto;
         position: absolute;top: 0px;left: 0px;right:0px;bottom: 0px;
     }
-}
+    #main{
+        padding:0px 5px 5px 5px;
+    }
 
-@media(min-width:600px){
     .wrapper {
-       display: flex;
        padding-top:10px;
+       display: flex;
+       flex-wrap:wrap;
    }
 }
-@media(min-width:600px){
-    .colorbuttons {
-        color: #ffffff;
-        text-decoration: none;
-        padding: 5px;
 
+@media(max-width:600px){
+    #main p
+    {
+        padding: 5px;
+        display: block;
     }
+    .menuitem{
+        text-align: center;
+        font-size: 20px;  
+    }
+    .welcome{
+        text-align:center;
+        font-size: 50px;
+    }
+    
+    li[onclick="reStyle(0)"]:hover{
+     background-color:#006400; 
+
+ }
+ .menuitem:hover{
+   background-color:gray;  
+}
+
 }
 
 
+
+/* start */
+
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+
+#main{
+   flex:4;
+}
+
+.colorbuttons{
+   color: #ffffff;
+   padding: 5px;
+   text-decoration: none;
+}
+
+
+/* header */
 #top {
     padding:10px 10px 10px 20px;
     margin-right:5px;
-    background-color: #32A852;
+    background-color: #4aa848;
     text-align: left;
 }
-
 #top:nth-child(1){
   padding-left:40px;
 }
@@ -49,10 +90,9 @@
 }
 
 
-
 .menuitem {
     border: 1px solid #696969;
-    border-radius:5px;
+    border-radius: 5px;
     list-style:none;
     width: 15.0em;
     background-color: #D3D3D3;
@@ -62,8 +102,14 @@
 }
 
 
-li[onclick="reStyle(0)"]{
- background-color: #32A852;   
+#menulist{
+    margin-top:23px;
+}
+
+
+.menuitem {
+    width: 105%;
+    height: 100%;
 }
 
 
@@ -73,12 +119,8 @@ li[onclick="reStyle(0)"]{
     margin-top:15px;
 }
 
-@media(min-width:600px){
-    #main{
-        flex:4;
-        padding:0px 5px 5px 5px;
-    }
-}
+
+/* Buttons */
 
 #greenbutton {
     border: 1px solid #008000;
@@ -100,14 +142,15 @@ li[onclick="reStyle(0)"]{
  background-color: #ff0000;
 }
 
+li[onclick="reStyle(0)"]{
+ background-color: #32A852;   
+}
+
+/* Footer */
 #bottom {
     border: 1px solid #D0D0D0;
     padding: 20px;
     background-color:  #E8E8E8;
     text-align: center;
     margin-top:15px;
-}
-
-.menuitem{
-   height:9.5%;
 }
