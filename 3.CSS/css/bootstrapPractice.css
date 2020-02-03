@@ -1,0 +1,65 @@
+.container-fluid{
+	border-radius: 0px;
+}
+
+.navbar-inverse .navbar-nav > .active > a{
+	background-color: lightblue;
+}
+
+.navbar-inverse .navbar-nav > .active > a:hover{
+	background-color: coral;
+}
+
+.navbar-inverse .navbar-nav > .active > a:focus{
+	position: relative;
+	width: 100%;
+	border-radius:0px;
+	background-color: blue;
+}
+
+#main-header{
+	position: relative;
+	width: 100%;
+	border-radius:0px;
+	background-color: dodgerblue;
+}
+
+
+
+.jumbotron{
+	color: #fff;
+	background: #FF7F50;
+	border: 1px solid black;
+	background: url("../images/food.jpg") center / cover no-repeat;
+	height: 50vh;
+	position: relative;
+	bottom: 25px;
+}
+
+@media(max-width:600px){
+	.jumbotron{
+		font-size: 5px;
+		height: 20vh;
+		border-radius: 0px;
+	}
+	
+}
+
+
+
+
+.col-sm-4, .col-sm-8, .col-sm-12, .col-sm-6, .col-sm-1{
+	border: 3px solid white;
+	background: #dcdcdc;
+	padding: 20px;
+}
+
+#w3{
+	height: 50vh;
+}
+
+.bigSpace{
+	height: 50vh;
+}
+
+
