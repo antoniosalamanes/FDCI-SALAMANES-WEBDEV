@@ -6,7 +6,7 @@
 	
 }
 
-.navbar-inverse .navbar-nav > .active > a:focus{
+.navbar-inverse .navbar-nva > .active > a:focus{
 	
 	} */
 
@@ -46,7 +46,11 @@
 		text-align: center;
 	}
 
-	.col-sm-3,.col-sm-4{
+	#gallery{
+		text-align: center;
+	}
+
+	#gallery .col-sm-3,.col-sm-4{
 		margin-top: 30px;
 	}
 
@@ -62,26 +66,51 @@
 		border: 15px solid darkgrey;
 		box-shadow: 5px 22px grey;
 	}
-	#gallery{
-		text-align: center;
+	
+	
+	#gallery #column-5{
+		position: relative;
 	}
 
-	@media(max-width:785px){
-		.col-sm-3{
-			margin-top: 30px;
-			padding-left:13%;
-
+	/* edit mobile view here */
+	@media(max-width:780px){
+		#gallery .img-circle,.img-responsive{
+			width: 80%;
+			margin: auto;
 		}
 	}
 
-	#contact-form{
-		padding: 35px;
+	/* edit what you want with max screen that won't show on small screens */
+	@media(min-width:680px){
+		#gallery #column-5{
+			position: relative;
+			left: 24%;
+			top: 2.5vh;
+		}	
+
+		#gallery #column-7{
+			position: relative;
+			right: 24%;
+			top: 2.5vh;
+		}	
+
 	}
 
-	/* label[for='email']{text-align: left;border:1px solid black;} */
+	img[alt='Contact Photo']{
+		height: fit-content;
+		position: relative;
+		width: 1500px;
+	}
 
 
 
+
+
+
+
+	
+
+	
 
 	/* #j-aboutme{
 		border-radius: 20px;
@@ -109,8 +138,6 @@
 
 		#contactme{
 			margin: auto;
-			border: 1px solid black;
-
 		}
 
 		.form-group-sm{
@@ -125,3 +152,127 @@
 			height: 15vh;
 		}
 
+
+
+
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+	padding-right: 0;
+	padding-left: 0;
+}
+.navbar-wrapper .navbar {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+	width: auto;
+}
+
+
+.carousel {
+	height: 500px;
+	margin-bottom: 60px;
+}
+.carousel-caption {
+	z-index: 10; 
+}
+
+
+.carousel .item {
+	height: 500px;
+	background-color: #777;
+
+}
+.carousel-inner > .item > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 500px;
+}
+
+.carousel-caption p {
+	margin-bottom: 20px;
+	font-size: 21px;
+	line-height: 1.4;
+}
+
+
+#main-footer{
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	top: 190px;
+}
+
+#main-footer > .well > .row > .col-sm-2 > small {
+	font-size: 14px;
+}
+
+#main-footer > .well > .row > .col-sm-2{
+	position: relative;
+	top: 40px;
+}
+
+#gobacktop-icon{
+	font-size: 30px;
+}
+
+
+.fa{
+	font-size: 40px;
+}
+
+.fa-youtube-play{
+	background-color: #fff;
+	color: red;
+	border-radius: 8px;
+	width:16%;
+	text-align: center;
+	padding-top:-2px;
+}
+
+
+.fa-instagram{
+	border-radius: 100%;
+	background: #f09433; 
+	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.fa-facebook{
+	color: #4267b2;
+	background-color: #fff;
+	border: 5px solid white;
+	border-radius: 5px;
+	width: 16%;
+	text-align: right;
+}
+
+ #privacy,#terms,#gobacktop{
+text-decoration: none;
+}
+
+#gobacktop{
+	float: right;
+}
+
+#copyright{
+	color: #337ab7;
+}
