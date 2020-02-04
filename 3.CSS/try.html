@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap3</title>
+
+  <!-- top metatags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0.7">
+  <!-- bottom metatags-->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrapPractice.css">
+</head>
+<body>
+
+
+  <!-- Navigation Bar -->
+  <div class="clearfix">
+    <header id="main-header">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>               
+            </button>
+            <a class="navbar-brand" href="#">Temporary</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="mainNavBar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Favorite Quotes</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hobbies and interest <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">MOBA games</a></li>
+                  <li><a href="#">Movies and Chill</a></li>
+                  <li><a href="#">Sleep</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Email </a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-heart"></span> Like </a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Carousel STARTS HERE -->
+      <div class="container" id="main-carousel">
+        <div id="tonton-header-carousel" class="carousel slide" data-ride="carousel">
+          <!-- Carousel -- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#tonton-header-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#tonton-header-carousel" data-slide-to="1"></li>
+            <li data-target="#tonton-header-carousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Carousel -- Wrapper for slides -->
+          <div class="carousel-inner">
+
+            <div class="item active">
+             <img id="first-carousel-image" src="images/temp.png" alt="Food">
+             <div class="carousel-caption">
+              <figcaption class="carousel-figure-caption">
+
+                <blockquote><p>“One cannot think well, love well, sleep well, if one has not dined well.”</p>
+                  <footer>&copy; Jose Rizal 1996</footer>
+                </blockquote>
+
+              </figcaption>
+            </div>
+          </div>
+
+          <div class="item">
+           <figure> <img id="second-carousel-image" src="images/temp.png" alt="Anime"></figure>
+           <div class="carousel-caption">
+            <figcaption class="carousel-figure-caption">
+
+
+              <blockquote><p>"I need to stop."</p>
+                <footer>I whispered to myself as I clicked 'NEXT EPISODE' </footer>
+              </blockquote>
+
+            </figcaption>
+          </div>
+        </div>
+      <!-- <div class="item">
+       <figure> <img id="third-carousel-image" src="images/temp.png" alt="Sleep"></figure>
+       <div class="carousel-caption">
+        <figcaption class="carousel-figure-caption">
+
+         <blockquote><p>“<span class="glyphicon glyphicon-music"></span>...Send me your location...<span class="glyphicon glyphicon-music"></span>" </p>
+           <footer>&copy; Grab Driver 2020</footer>
+         </blockquote>
+
+       </figcaption>
+     </div>
+   </div> -->
+ </div>
+
+ <!-- Carousel -- Left and right controls -->
+ <a class="left carousel-control" href="#tonton-header-carousel" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#tonton-header-carousel" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right"></span>
+  <span class="sr-only">Next</span>
+</a>
+</div>
+</header>
+</div>
+
+<hr>
+
+<!-- INTERESTS -->
+<div class="container" id="interests">
+  <div class="row" id="row1">  
+    <div class="col-md-4"><img class="img-circle img-fluid" src=images/circle.png width="250px" height="250px">
+      <div class="well">
+        <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi id odio ratione perferendis quibusdam in atque quisquam ipsum minima aperiam, laboriosam! Quae omnis saepe, porro eveniet temporibus, voluptas architecto eum!</p>
+        <div class="btn btn-primary"> View More <div class="glyphicon glyphicon-search"></div></div>
+      </div>
+    </div>
+    <div class="col-md-4"><img class="img-circle img-fluid" src=images/circle.png width="250px" height="250px">
+     <div class="well">
+      <h1>Heading</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi id odio ratione perferendis quibusdam in atque quisquam ipsum minima aperiam, laboriosam! Quae omnis saepe, porro eveniet temporibus, voluptas architecto eum!</p>
+      <div class="btn btn-primary"> View More <div class="glyphicon glyphicon-search"></div></div>
+
+    </div>
+  </div>
+  <div class="col-md-4"><img class="img-circle img-fluid" src=images/circle.png width="250px" height="250px">
+   <div class="well">
+    <h1>Heading</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi id odio ratione perferendis quibusdam in atque quisquam ipsum minima aperiam, laboriosam! Quae omnis saepe, porro eveniet temporibus, voluptas architecto eum!</p>
+    <div class="btn btn-primary"> View More <div class="glyphicon glyphicon-search"></div></div>
+
+  </div>
+</div>
+
+</div>
+</div>
+
+<hr>
+
+<!-- GALLERY -->
+<div class="container" id="gallery">
+  <h1>Gallery</h1>
+  <div class="row">
+    <div class="col-sm-3"> <img src="images/gallery.png" class="img-circle" alt="temporary gallery" width="262px" height="262px"></div>
+    <div class="col-sm-3"> <img src="images/gallery.png" class="img-responsive" alt="temporary gallery" width="300px" height="300px"></div>
+    <div class="col-sm-3"> <img src="images/gallery.png" class="img-responsive" alt="temporary gallery" width="300px" height="300px"></div>
+    <div class="col-sm-3"> <img src="images/gallery.png" class="img-circle" alt="temporary gallery" width="262px" height="262px"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"> <img src="images/gallery.png" class="img-responsive" alt="temporary gallery" width="262px" height="262px"></div>
+    <div class="col-sm-4"> <img src="images/gallery.png" class="img-circle" alt="temporary gallery" width="262px" height="262px"></div>
+    <div class="col-sm-4"> <img src="images/gallery.png" class="img-responsive" alt="temporary gallery" width="262px" height="262px"></div>
+    
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3"> <img src="images/gallery.png" class="img-responsive" alt="temporary gallery" width="300px" height="300px"></div>
+    <div class="col-sm-3"> <img src="images/gallery.png" class="img-circle" alt="temporary gallery" width="262px" height="262px"></div>
+    <div class="col-sm-3"> <img src="images/gallery.png" class="img-circle" alt="temporary gallery" width="262px" height="262px"></div>
+    <div class="col-sm-3"> <img src="images/gallery.png" class="img-responsive" alt="temporary gallery" width="300px" height="300px"></div>
+  </div>
+
+</div>
+
+
+<div class="smallSpace"></div>
+
+<!-- CONTACT ME -->
+<!-- <div class="container" id="contactme">
+  <div class="row" id="contactme-row"></div>
+  <div class="col-sm-5"><img src="images/temp.png" class="img-responsive" alt="Contact Photo"></div>
+
+
+  <div class="col-sm-7">
+      <form class="form-horizontal" action="/action_page.php">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Email:</label>
+          <div class="col-sm-4">
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="pwd">Password:</label>
+          <div class="col-sm-1">          
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+          </div>
+        </div>
+        <div class="form-group">        
+        </div>      
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Submit</button>
+          </div>
+        </div>
+      </form> 
+</div>
+-->
+
+
+<div class="container" id="contactme">
+  <div class="row">
+    <div class="col-sm-6"><img src="images/temp.png" class="img-responsive" alt="Contact Photo">
+    </div>
+    <div class="col-sm-6" id="contact-secondcolumn">
+      <div class="form-horizontal" id="contact-form">
+        <form action="#">
+          <div class="form-group-sm">
+            <label class="control-label"for="name">Your Complete Name</label><br>
+            <input type="text">
+          </div>
+
+          <div class="form-group-sm" id="formgroup-2">
+            <label class="control-label" for="Message">Message:</label><br>
+            <textarea rows="6" class="form-control" placeholder="What's on your mind?" id="message-textarea"></textarea></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<footer class="container" id="main-footer">
+
+
+</footer>
+
+
+<div class="bigSpace"></div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+  <main class="jumbotron" id="j-aboutme">
+    <h1>ALL ABOUT ME</h1>
+    <p class= id="well"j-aboutme-well">
+      <code>The</code> <kbd>quick</kbd> <span class="well">brown</span> <mark>fox</mark><span class="bg-primary"> jumps </span>
+      <span class="bg-success"> over </span>
+      <mark> the </mark>
+      <span class="bg-warning"> lazy </span>
+      <kbd> dog. </kbd>
+      <p class="justify">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio deserunt earum assumenda atque voluptatem facere illo odio, sed placeat, totam eveniet harum, distinctio autem. Quaerat illo, iusto omnis quis aliquid.
+      </p>
+    </main>
+  </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
