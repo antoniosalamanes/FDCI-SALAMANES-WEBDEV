@@ -25,25 +25,26 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>               
-            </button
-            <a class="navbar-brand" href="#">Temporary</a>
+            </button>
+            <a class="navbar-brand" id="nav-logo" href="#">Temporary</a>
           </div>
 
           <div class="collapse navbar-collapse" id="mainNavBar">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#main-carousel">Home</a></li>
+              <li class="active"><a href="#main-carousel"><span class="glyphicon glyphicon-home"></span></a></li>
               <li><a href="#aboutme">Just Me</a></li>
-              <li><a href="#interests">Interests</a></li>
-              <li><a href="#contactme">Contact</a></li>
-
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Galleries<span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Interests<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#gallery">MOBA games</a></li>
-                  <li><a href="#gallery">Movies and Chill</a></li>
-                  <li><a href="#gallery">Sleep</a></li>
+                  <li><a href="#interests">MOBA games</a></li>
+                  <hr>
+                  <li><a href="#interests">Movies and Chill</a></li>
+                  <hr>
+                  <li><a href="#interests">Sleep</a></li>
                 </ul>
               </li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contactme">Contact</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -61,9 +62,9 @@
     <div id="tonton-header-carousel" class="carousel slide" data-ride="carousel">
       <!-- Carousel -- Indicators -->
       <ol class="carousel-indicators">
-        <li data-target="#tonton-header-carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#tonton-header-carousel" data-slide-to="1"></li>
-        <li data-target="#tonton-header-carousel" data-slide-to="2"></li>
+        <li data-target="#tonton-header-carousel" data-slide-to="0" class="btn-success btn-sm active"></li>
+        <li data-target="#tonton-header-carousel" data-slide-to="1" class="btn-warning btn-sm active"></li>
+        <li data-target="#tonton-header-carousel" data-slide-to="2" class="btn-danger btn-sm active"></li>
       </ol>
 
       <!-- Carousel -- Wrapper for slides -->
@@ -123,11 +124,13 @@
 </div>
 <!-- CAROUSEL ENDS HERE -->
 
+<div class="smallSpace"></div>
+
 <!-- ABOUT ME -->
 <section class="container" id="aboutme">
-  <h1>About me</h1>
+  <h1 class="section-headers">ABOUT ME</h1>
   <main class="jumbotron" id="j-aboutme">
-   <!--  <p class=well id="j-aboutme-well">
+<!--  <p class=well id="j-aboutme-well">
 <code>The</code> <kbd>quick</kbd> <span class="well">brown</span> <mark>fox</mark><span class="bg-primary"> jumps </span>
 <span class="bg-success"> over </span>
 <mark> the </mark>
@@ -139,128 +142,191 @@
 </main>
 </section>
 
-<hr class="half-rule"/>
 
+<div class="smallSpace"></div>
 
 <!-- INTERESTS -->
 <section class="container-fluid" id="interests">
-  <h1>Interests</h1>
+  <h1 class="section-headers">INTERESTS</h1>
   <div class="row" id="row1">  
     <div class="col-md-4"><img class="img-circle img-fluid" src=images/circle.png width="400px" height="400px">
       <div class="well">
+        <!-- Interests #1 -->
         <h1>Heading</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi id odio ratione perferendis quibusdam in atque quisquam ipsum minima aperiam, laboriosam! Quae omnis saepe, porro eveniet temporibus, voluptas architecto eum!</p>
-        <div class="btn btn-primary"> View More <span class="glyphicon glyphicon-search"></span></div>
+        <!-- Trigger Modal Button -->
+        <div class="btn btn-primary" data-toggle="modal" data-target="#viewmore-1"> View More <span class="glyphicon glyphicon-search"></span></div></div>
       </div>
-    </div>
-    <div class="col-md-4"><img class="img-circle img-fluid" src=images/circle.png width="400px" height="400px">
-      <div class="well">
-        <h1>Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi id odio ratione perferendis quibusdam in atque quisquam ipsum minima aperiam, laboriosam! Quae omnis saepe, porro eveniet temporibus, voluptas architecto eum!</p>
-        <div class="btn btn-primary"> View More <span class="glyphicon glyphicon-search"></span></div>
 
-      </div>
-    </div>
-    <div class="col-md-4"><img class="img-circle img-fluid" src=images/circle.png width="400px" height="400px">
-      <div class="well">
-        <h1>Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi id odio ratione perferendis quibusdam in atque quisquam ipsum minima aperiam, laboriosam! Quae omnis saepe, porro eveniet temporibus, voluptas architecto eum!</p>
-        <div class="btn btn-primary"> View More <span class="glyphicon glyphicon-search"></span></div>
-
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<hr class="half-rule"/>
-
-<!-- GALLERY -->
-<div class="container-fluid" id="gallery">
-  <h1>Gallery</h1>
-  <div class="row" id="gallery-row-1">
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-1"   class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-2"   class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-3"   class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-4"   class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
-  </div> 
-  <div class="row" id="gallery-row-2">
-    <div class="col-sm-4"> <img src="images/gallery.png" id="column-5" class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
-    <div class="col-sm-4"> <img src="images/gallery.png" id="column-6"  class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
-    <div class="col-sm-4"> <img src="images/gallery.png" id="column-7"  class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
-
-  </div>
-
-  <div class="row" id="gallery-row-3">
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-8" class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-9" class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-10" class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-11" class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
-  </div>
-
-</div>
-
-<hr class="half-rule"/>
+      <!-- Interests #3 -->
+      <div class="col-md-4"><img class="img-circle img-fluid" src=images/circle.png width="400px" height="400px">
+        <div class="well">
+          <h1>Heading</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi id odio ratione perferendis quibusdam in atque quisquam ipsum minima aperiam, laboriosam! Quae omnis saepe, porro eveniet temporibus, voluptas architecto eum!</p>
+          <!-- Trigger Modal Button -->
+          <div class="btn btn-primary" data-toggle="modal" data-target="#viewmore-2"> View More <span class="glyphicon glyphicon-search"></span></div></div>
+        </div>
 
 
+        <div class="col-md-4"><img class="img-circle img-fluid" src=images/circle.png width="400px" height="400px">
+          <div class="well">
+            <!-- Interests #3 -->
+            <h1>Heading</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi id odio ratione perferendis quibusdam in atque quisquam ipsum minima aperiam, laboriosam! Quae omnis saepe, porro eveniet temporibus, voluptas architecto eum!</p>
+            <div class="btn btn-primary" data-toggle="modal" data-target="#viewmore-3"> View More <span class="glyphicon glyphicon-search"></span></div></div>
 
-
-
-<!-- CONTACT ME -->
-<section class="container-fluid" id="contactme">
-  <h1>Contact</h1>
-  <div class="row">
-    <div class="col-sm-6"><img src="images/temp.png" class="img-responsive" alt="Contact Photo">
-    </div>
-    <div class="col-sm-6" id="contact-secondcolumn">
-      <div class="form-vertical" id="contact-form">
-        <form action="#">
-          <div class="form-group-sm" id="formgroup-1">
-            <label class="control-label"for="name">Your Complete Name</label><br>
-            <input type="text" class="form-control" id="fullname" maxlength="50">
           </div>
 
-          <div class="form-group-sm" id="formgroup-2">
-            <label class="control-label" for="Message">Message:</label><br>
-            <textarea rows="10" class="form-control" placeholder="What's on your mind?" id="message-textarea" maxlength="1000"></textarea></div>
+        </div>
 
-            <div class="form-group-sm" id="formgroup-3">
-              <input type="submit" class="btn btn-primary align-right" id="contact-button"></div>
+        <!-- MODALS -->
+        <!-- MODAL FOR INTEREST #1 -->
+        <div class="modal fade" id="viewmore-1" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header"> 
+                <h4 class="modal-title">ABOUT ME</h4>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quibusdam, obcaecati, eaque ipsa, maxime ipsum at velit voluptatum quae modi fugit ab dolores quis suscipit nulla eos optio possimus labore.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- MODAL FOR INTEREST #2 -->
+        <div class="modal fade" id="viewmore-2" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header"> 
+                <h4 class="modal-title">ABOUT ME</h4>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quibusdam, obcaecati, eaque ipsa, maxime ipsum at velit voluptatum quae modi fugit ab dolores quis suscipit nulla eos optio possimus labore.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- MODAL FOR INTEREST #3 -->
+        <div class="modal fade" id="viewmore-3" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header"> 
+                <h4 class="modal-title">ABOUT ME</h4>
+              </div>
+              <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum qui impedit cupiditate, quia, nobis a eum ipsam inventore, deserunt sit aut consequatur blanditiis quaerat atque veritatis culpa recusandae nesciunt accusamus!</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <div class="smallSpace"></div>
+
+      <!-- GALLERY -->
+      <div class="container-fluid" id="gallery">
+        <h1 class="section-headers">GALLERY</h1>
+        <div class="row" id="gallery-row-1">
+          <div class="col-sm-3"> <img src="images/gallery.png" id="column-1"   class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
+          <div class="col-sm-3"> <img src="images/gallery.png" id="column-2"   class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
+          <div class="col-sm-3"> <img src="images/gallery.png" id="column-3"   class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
+          <div class="col-sm-3"> <img src="images/gallery.png" id="column-4"   class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
+        </div> 
+        <div class="row" id="gallery-row-2">
+          <div class="col-sm-4"> <img src="images/gallery.png" id="column-5" class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
+          <div class="col-sm-4"> <img src="images/gallery.png" id="column-6"  class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
+          <div class="col-sm-4"> <img src="images/gallery.png" id="column-7"  class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
+
+        </div>
+
+        <div class="row" id="gallery-row-3">
+          <div class="col-sm-3"> <img src="images/gallery.png" id="column-8" class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
+          <div class="col-sm-3"> <img src="images/gallery.png" id="column-9" class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
+          <div class="col-sm-3"> <img src="images/gallery.png" id="column-10" class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
+          <div class="col-sm-3"> <img src="images/gallery.png" id="column-11" class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
+        </div>
+
+      </div>
+
+
+
+
+
+      <div class="smallSpace"></div>
+
+      <!-- CONTACT ME -->
+      <section class="container-fluid" id="contactme">
+        <h1 class="section-headers">CONTACT</h1>
+        <div class="row">
+          <div class="col-sm-6"><img src="images/temp.png" class="img-responsive" alt="Contact Photo">
+          </div>
+          <div class="col-sm-6" id="contact-secondcolumn">
+            <div class="form-vertical" id="contact-form">
+              <form action="#">
+                <div class="form-group-sm" id="formgroup-1">
+                  <label class="control-label"for="name">Your Complete Name</label><br>
+                  <input type="text" class="form-control" id="fullname" maxlength="50">
+                </div>
+
+                <div class="form-group-sm" id="formgroup-2">
+                  <label class="control-label" for="Message">Message:</label><br>
+                  <textarea rows="10" class="form-control" placeholder="What's on your mind?" id="message-textarea" maxlength="1000"></textarea></div>
+
+                  <div class="form-group-sm" id="formgroup-3">
+                    <input type="submit" class="btn btn-primary align-right" id="contact-button"></div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
 
 
 
 
 
-<footer class="well" id="main-footer">
-  <div class="row">
-    <!-- <div class="col-sm-1 "> <img src="images/samplelogo.png" class="img-circle" alt="Logo"></div> -->
-    <div class="col-sm-2"> <span class="fa fa-youtube-play" alt="Youtube"></span><small>&nbsp;&nbsp;/LutongBahayPinoy</small></div>
-    <div class="col-sm-2"> <span class="fa fa-instagram" alt="Instagram"></span><small>&nbsp;&nbsp;@TonTheChef</small></div>
-    <div class="col-sm-2"> <span class="fa fa-facebook" alt="Facebook"></span><small>&nbsp;&nbsp;/GourmetFromGods </small></div>
-    <div class="col-sm-2"></div>
-  </div>
+      <footer class="well" id="main-footer">
+        <div class="row">
+          <!-- <div class="col-sm-1 "> <img src="images/samplelogo.png" class="img-circle" alt="Logo"></div> -->
+          <div class="col-sm-2"> <span class="fa fa-youtube-play" alt="Youtube"></span><small>&nbsp;&nbsp;/LutongBahayPinoy</small></div>
+          <div class="col-sm-2"> <span class="fa fa-instagram" alt="Instagram"></span><small>&nbsp;&nbsp;@TonTheChef</small></div>
+          <div class="col-sm-2"> <span class="fa fa-facebook" alt="Facebook"></span><small>&nbsp;&nbsp;/GourmetFromGods </small></div>
+          <div class="col-sm-2"></div>
+        </div>
 
-  <div class="row">
-    <div class="col-sm-4" id="copyright"><small>Copyright &copy; January 2020, Salamanes Corporation</small> 
-      <span class="btn btn-link" id="privacy"><small>Privacy</small></span>
-      <span class="btn btn-link" id="terms"><small>Terms</small></span>
-    </div>
-    <div class ="col-sm-9">
-      <div class="back"><a href="#" class="btn btn-link pull-right" id="gobacktop">Go back to Top <span class="fa fa-angle-double-up" id="gobacktop-icon"></span> </a></div></div>
-    </div>
-  </footer>
+        <div class="row">
+          <div class="col-sm-4" id="copyright"><small>Copyright &copy; January 2020, Salamanes Corporation</small> 
+            <span class="btn btn-link" id="privacy"><small>Privacy</small></span>
+            <span class="btn btn-link" id="terms"><small>Terms</small></span>
+          </div>
+          <div class ="col-sm-9">
+            <div class="back"><a href="#" class="btn btn-link pull-right" id="gobacktop">Go back to Top <span class="fa fa-angle-double-up" id="gobacktop-icon"></span> </a></div></div>
+          </div>
+        </footer>
 
-  <!-- Jquery and Bootstrap script lines -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Jquery and Bootstrap script lines -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
 
-</body>
-</html>
+      </body>
+      </html>
