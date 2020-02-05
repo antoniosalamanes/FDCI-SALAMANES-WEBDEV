@@ -10,10 +10,13 @@
 	
 	} */
 
+
+
+
+
 	body{
 		background:lightgrey;
-		margin: 0px
-
+		margin: 0px;
 	}
 
 
@@ -41,19 +44,26 @@
 		background-color: /* hsla(14, 100%, 53%, 0.6); */#f2f2f2;
 	}
 
+	#aboutme{
+		text-align: center;
+	}
+
+
 	#interests{
 		margin-top: 10px;
 		text-align: center;
 	}
 
 	#gallery{
-		text-align: center;
+		text-align:center;
+		position:relative;
+		bottom:9px;
 	}
 
-	#gallery .col-sm-3,.col-sm-4{
+	/* #gallery .col-sm-3,.col-sm-4{
 		margin-top: 30px;
 	}
-
+	*/
 	#gallery .img-responsive{
 		margin: auto;
 		border-radius: 35px;
@@ -78,6 +88,11 @@
 			width: 80%;
 			margin: auto;
 		}
+		#main-footer{
+			display: none;
+		}
+
+
 	}
 
 	/* edit what you want with max screen that won't show on small screens */
@@ -93,6 +108,7 @@
 			right: 24%;
 			top: 2.5vh;
 		}	
+
 
 	}
 
@@ -138,6 +154,12 @@
 
 		#contactme{
 			margin: auto;
+
+		}
+
+		#contactme > h1{
+			text-align: center;
+			padding-bottom: 10px;
 		}
 
 		.form-group-sm{
@@ -217,6 +239,7 @@
 	padding: 0px;
 	position: relative;
 	top: 190px;
+	height: 91px;
 }
 
 #main-footer > .well > .row > .col-sm-2 > small {
@@ -234,14 +257,14 @@
 
 
 .fa{
-	font-size: 40px;
+	font-size: 35px;
 }
 
 .fa-youtube-play{
 	background-color: #fff;
 	color: red;
-	border-radius: 8px;
-	width:16%;
+	border-radius: 15px;
+	width:20%;
 	text-align: center;
 	padding-top:-2px;
 }
@@ -253,26 +276,50 @@
 	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
 	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
 
 .fa-facebook{
-	color: #4267b2;
-	background-color: #fff;
-	border: 5px solid white;
+	font-size: 30px;
+	color: #fff;
+	background-color: #4267b2;
+	border: 5px solid #4267b2;
 	border-radius: 5px;
 	width: 16%;
 	text-align: right;
 }
 
- #privacy,#terms,#gobacktop{
-text-decoration: none;
+#privacy,#terms,#gobacktop{
+	text-decoration: none;
 }
 
 #gobacktop{
 	float: right;
 }
 
+.back{
+	position: fixed;
+	bottom:16px;
+	left:1757px;
+	color: #fff;
+}
+
+
+
 #copyright{
 	color: #337ab7;
 }
+
+
+#main-footer{
+	padding: 15px 15px 0px 15px;
+	background: black;
+	color: #fff;
+}
+
+
+
+
+
+/* TEST */
+
+

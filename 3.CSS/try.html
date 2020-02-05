@@ -13,14 +13,13 @@
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrapPractice.css">
 </head>
-<body>
-
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
   <!-- Navigation Bar -->
   <div class="clearfix">
     <header id="main-header">
       <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
+        <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
               <span class="icon-bar"></span>
@@ -32,15 +31,17 @@
 
           <div class="collapse navbar-collapse" id="mainNavBar">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Favorite Quotes</a></li>
+              <li class="active"><a href="#main-carousel">Home</a></li>
+              <li><a href="#aboutme">Just Me</a></li>
+              <li><a href="#interests">Interests</a></li>
+              <li><a href="#contactme">Contact</a></li>
+
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hobbies and interest <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Galleries<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">MOBA games</a></li>
-                  <li><a href="#">Movies and Chill</a></li>
-                  <li><a href="#">Sleep</a></li>
+                  <li><a href="#gallery">MOBA games</a></li>
+                  <li><a href="#gallery">Movies and Chill</a></li>
+                  <li><a href="#gallery">Sleep</a></li>
                 </ul>
               </li>
             </ul>
@@ -67,41 +68,41 @@
           <div class="carousel-inner">
 
             <div class="item active">
-             <img id="first-carousel-image" src="images/temp.png" alt="Food">
+             <img id="first-carousel-image" src="images/anime.jpg" alt="Food">
              <div class="carousel-caption">
-              <figcaption class="carousel-figure-caption">
+              <!-- <figcaption class="carousel-figure-caption">
 
                 <blockquote><p>“One cannot think well, love well, sleep well, if one has not dined well.”</p>
                   <footer>&copy; Jose Rizal 1996</footer>
                 </blockquote>
 
-              </figcaption>
+              </figcaption> -->
             </div>
           </div>
 
           <div class="item">
            <figure> <img id="second-carousel-image" src="images/temp.png" alt="Anime"></figure>
            <div class="carousel-caption">
-            <figcaption class="carousel-figure-caption">
+           <!--  <figcaption class="carousel-figure-caption">
 
 
               <blockquote><p>"I need to stop."</p>
                 <footer>I whispered to myself as I clicked 'NEXT EPISODE' </footer>
               </blockquote>
 
-            </figcaption>
+            </figcaption> -->
           </div>
         </div>
         <div class="item">
          <figure> <img id="third-carousel-image" src="images/temp.png" alt="Sleep"></figure>
          <div class="carousel-caption">
-          <figcaption class="carousel-figure-caption">
+         <!--  <figcaption class="carousel-figure-caption">
 
            <blockquote><p>“<span class="glyphicon glyphicon-music"></span>...Send me your location...<span class="glyphicon glyphicon-music"></span>" </p>
              <footer>&copy; Grab Driver 2020</footer>
            </blockquote>
 
-         </figcaption>
+         </figcaption> -->
        </div>
      </div>
    </div>
@@ -118,17 +119,44 @@
 </div>
 </header>
 </div>
+<!-- CAROUSEL ENDS HERE -->
 
-<hr>
+<!-- ABOUT ME -->
+<div class="container" id="aboutme">
+  <h1>About me</h1>
+  <main class="jumbotron" id="j-aboutme">
+    <p class= id="well"j-aboutme-well">
+      <!-- <code>The</code> <kbd>quick</kbd> <span class="well">brown</span> <mark>fox</mark><span class="bg-primary"> jumps </span>
+      <span class="bg-success"> over </span>
+      <mark> the </mark>
+      <span class="bg-warning"> lazy </span>
+      <kbd> dog. </kbd> -->
+      <p class="justify">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio deserunt earum assumenda atque voluptatem facere illo odio, sed placeat, totam eveniet harum, distinctio autem. Quaerat illo, iusto omnis quis aliquid.
+      </p>
+    </main>
+  </div>
 
-<!-- INTERESTS -->
-<div class="container" id="interests">
-  <div class="row" id="row1">  
-    <div class="col-md-4"><img class="img-circle img-fluid" src=images/circle.png width="400px" height="400px">
-      <div class="well">
+  <hr class="half-rule"/>
+
+
+  <!-- INTERESTS -->
+  <div class="container" id="interests">
+    <h1>Interests</h1>
+    <div class="row" id="row1">  
+      <div class="col-md-4"><img class="img-circle img-fluid" src=images/circle.png width="400px" height="400px">
+        <div class="well">
+          <h1>Heading</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi id odio ratione perferendis quibusdam in atque quisquam ipsum minima aperiam, laboriosam! Quae omnis saepe, porro eveniet temporibus, voluptas architecto eum!</p>
+          <div class="btn btn-primary"> View More <div class="glyphicon glyphicon-search"></div></div>
+        </div>
+      </div>
+      <div class="col-md-4"><img class="img-circle img-fluid" src=images/circle.png width="400px" height="400px">
+       <div class="well">
         <h1>Heading</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi id odio ratione perferendis quibusdam in atque quisquam ipsum minima aperiam, laboriosam! Quae omnis saepe, porro eveniet temporibus, voluptas architecto eum!</p>
         <div class="btn btn-primary"> View More <div class="glyphicon glyphicon-search"></div></div>
+
       </div>
     </div>
     <div class="col-md-4"><img class="img-circle img-fluid" src=images/circle.png width="400px" height="400px">
@@ -139,55 +167,51 @@
 
     </div>
   </div>
-  <div class="col-md-4"><img class="img-circle img-fluid" src=images/circle.png width="400px" height="400px">
-   <div class="well">
-    <h1>Heading</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi id odio ratione perferendis quibusdam in atque quisquam ipsum minima aperiam, laboriosam! Quae omnis saepe, porro eveniet temporibus, voluptas architecto eum!</p>
-    <div class="btn btn-primary"> View More <div class="glyphicon glyphicon-search"></div></div>
-
-  </div>
-</div>
 
 </div>
 </div>
 
-<hr>
+<hr class="half-rule"/>
 
 <!-- GALLERY -->
 <div class="container-fluid" id="gallery">
   <h1>Gallery</h1>
-  <div class="row">
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-1"   class="img-circle" alt="temporary gallery" width="300px" height="300px"></div>
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-2"   class="img-responsive" alt="temporary gallery" width="300px" height="300px"></div>
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-3"   class="img-responsive" alt="temporary gallery" width="300px" height="300px"></div>
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-4"   class="img-circle" alt="temporary gallery" width="300px" height="300px"></div>
+  <div class="row" id="gallery-row-1">
+    <div class="col-sm-3"> <img src="images/gallery.png" id="column-1"   class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
+    <div class="col-sm-3"> <img src="images/gallery.png" id="column-2"   class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
+    <div class="col-sm-3"> <img src="images/gallery.png" id="column-3"   class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
+    <div class="col-sm-3"> <img src="images/gallery.png" id="column-4"   class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
   </div> 
-  <div class="row">
-    <div class="col-sm-4"> <img src="images/gallery.png" id="column-5" class="img-responsive" alt="temporary gallery" width="300px" height="300px"></div>
-    <div class="col-sm-4"> <img src="images/gallery.png" id="column-6"  class="img-circle" alt="temporary gallery" width="300px" height="300px"></div>
-    <div class="col-sm-4"> <img src="images/gallery.png" id="column-7"  class="img-responsive" alt="temporary gallery" width="300px" height="300px"></div>
+  <div class="row" id="gallery-row-2">
+    <div class="col-sm-4"> <img src="images/gallery.png" id="column-5" class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
+    <div class="col-sm-4"> <img src="images/gallery.png" id="column-6"  class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
+    <div class="col-sm-4"> <img src="images/gallery.png" id="column-7"  class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
     
   </div>
 
-  <div class="row">
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-8" class="img-responsive" alt="temporary gallery" width="300px" height="300px"></div>
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-9" class="img-circle" alt="temporary gallery" width="300px" height="300px"></div>
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-10" class="img-circle" alt="temporary gallery" width="300px" height="300px"></div>
-    <div class="col-sm-3"> <img src="images/gallery.png" id="column-11" class="img-responsive" alt="temporary gallery" width="300px" height="300px"></div>
+  <div class="row" id="gallery-row-3">
+    <div class="col-sm-3"> <img src="images/gallery.png" id="column-8" class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
+    <div class="col-sm-3"> <img src="images/gallery.png" id="column-9" class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
+    <div class="col-sm-3"> <img src="images/gallery.png" id="column-10" class="img-circle" alt="temporary gallery" width="226px" height="226px"></div>
+    <div class="col-sm-3"> <img src="images/gallery.png" id="column-11" class="img-responsive" alt="temporary gallery" width="250px" height="250px"></div>
   </div>
 
 </div>
 
+<hr class="half-rule"/>
 
-<div class="smallSpace"></div>
+
+
+
 
 <!-- CONTACT ME -->
-<div class="container-fluid" id="contactme">
+<div class="container" id="contactme">
+  <h1>Contact</h1>
   <div class="row">
     <div class="col-sm-6"><img src="images/temp.png" class="img-responsive" alt="Contact Photo">
     </div>
     <div class="col-sm-6" id="contact-secondcolumn">
-      <div class="form-horizontal" id="contact-form">
+      <div class="form-vertical" id="contact-form">
         <form action="#">
           <div class="form-group-sm" id="formgroup-1">
             <label class="control-label"for="name">Your Complete Name</label><br>
@@ -212,65 +236,27 @@
 
 
 
-<footer class="container-fluid" id="main-footer">
-  <div class="well" style="background:black;color:#fff">
 
-    <div class="row">
-      <div class="col-sm-1 "> <img src="images/samplelogo.png" class="img-circle" alt="Logo"></div>
-      <div class="col-sm-2"> <span class="fa fa-youtube-play" alt="Youtube"></span><small>&nbsp;&nbsp;/LutongBahayPinoy</small></div>
-      <div class="col-sm-2"> <span class="fa fa-instagram" alt="Instagram"></span><small>&nbsp;&nbsp;@TonTheChef</small></div>
-      <div class="col-sm-2"> <span class="fa fa-facebook" alt="Facebook"></span><small>&nbsp;&nbsp;/GourmetFromGods </small></div>
-      <div class="col-sm-2"></div>
+<footer class="well" id="main-footer">
+  <div class="row">
+    <!-- <div class="col-sm-1 "> <img src="images/samplelogo.png" class="img-circle" alt="Logo"></div> -->
+    <div class="col-sm-2"> <span class="fa fa-youtube-play" alt="Youtube"></span><small>&nbsp;&nbsp;/LutongBahayPinoy</small></div>
+    <div class="col-sm-2"> <span class="fa fa-instagram" alt="Instagram"></span><small>&nbsp;&nbsp;@TonTheChef</small></div>
+    <div class="col-sm-2"> <span class="fa fa-facebook" alt="Facebook"></span><small>&nbsp;&nbsp;/GourmetFromGods </small></div>
+    <div class="col-sm-2"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4" id="copyright"><small>Copyright &copy; January 2020, Salamanes Corporation</small> 
+      <span class="btn btn-link" id="privacy"><small>Privacy</small></span>
+      <span class="btn btn-link" id="terms"><small>Terms</small></span>
     </div>
+    <div class ="col-sm-9">
+      <div class="back"><a href="#" class="btn btn-link" id="gobacktop">Go back to Top <span class="fa fa-angle-double-up" id="gobacktop-icon"></span> </a></div></div>
+    </div>
+  </footer>
 
-    <div class="row">
-      <div class="col-sm-3" id="copyright"><small>Copyright &copy; January 2020, Salamanes Corporation</small> 
-        <span class="btn btn-link" id="privacy">Privacy</span>
-        <span class="btn btn-link" id="terms">Terms</span>
-        </div>
-        <div class ="col-sm-9 btn btn-link"> <a href="#" id="gobacktop">Go back to Top <span class="fa fa-angle-double-up" id="gobacktop-icon"></span> </a></div>
-      </div>
-
-</footer>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="container">
-  <main class="jumbotron" id="j-aboutme">
-    <h1>ALL ABOUT ME</h1>
-    <p class= id="well"j-aboutme-well">
-      <code>The</code> <kbd>quick</kbd> <span class="well">brown</span> <mark>fox</mark><span class="bg-primary"> jumps </span>
-      <span class="bg-success"> over </span>
-      <mark> the </mark>
-      <span class="bg-warning"> lazy </span>
-      <kbd> dog. </kbd>
-      <p class="justify">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio deserunt earum assumenda atque voluptatem facere illo odio, sed placeat, totam eveniet harum, distinctio autem. Quaerat illo, iusto omnis quis aliquid.
-      </p>
-    </main>
-  </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- Jquery and Bootstrap script lines -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
 </body>
