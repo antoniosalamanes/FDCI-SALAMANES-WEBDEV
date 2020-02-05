@@ -1,13 +1,13 @@
 /* .navbar-inverse .navbar-nav > .active > a{
-	
+
 }
 
 .navbar-inverse .navbar-nav > .active > a:hover{
-	
+
 }
 
 .navbar-inverse .navbar-nva > .active > a:focus{
-	
+
 	} */
 
 
@@ -16,7 +16,7 @@
 
 	body{
 		background:lightgrey;
-		margin: 0px;
+		/* margin: 0px; */
 	}
 
 
@@ -24,17 +24,14 @@
 		border-radius: 0px;
 	}
 
-
-	#main-carousel{
+	#nav-container{
 		padding: 0px;
-		position: relative;
-		bottom: 22px;
 	}
 
 
-	#first-carousel-image{width:100%;height:70vh;border-radius:10px;}
-	#second-carousel-image{width:100%;height:70vh;border-radius:10px;}
-	#third-carousel-image{width:100%;height:70vh;border-radius:10px;}
+	#main-carousel{
+		padding: 0px;
+	}
 
 
 	.carousel-figure-caption{
@@ -60,63 +57,67 @@
 		bottom:9px;
 	}
 
-	/* #gallery .col-sm-3,.col-sm-4{
-		margin-top: 30px;
-	}
-	*/
-	#gallery .img-responsive{
+/* #gallery .col-sm-3,.col-sm-4{
+margin-top: 30px;
+}
+*/
+#gallery .img-responsive{
+	margin: auto;
+	border-radius: 35px;
+	border: 15px solid darkgrey;
+	box-shadow: 5px 22px grey;
+}
+
+#gallery .img-circle{
+	margin: auto;
+	border: 15px solid darkgrey;
+	box-shadow: 5px 22px grey;
+}
+
+#gallery-row-2{
+	padding: 39px;
+}
+
+
+#gallery #column-5{
+	position: relative;
+}
+
+/* edit mobile view here */
+@media(max-width:780px){
+	#gallery .img-circle,.img-responsive{
+		width: 80%;
 		margin: auto;
-		border-radius: 35px;
-		border: 15px solid darkgrey;
-		box-shadow: 5px 22px grey;
+	}
+	#main-footer{
+		display: none;
 	}
 
-	#gallery .img-circle{
-		margin: auto;
-		border: 15px solid darkgrey;
-		box-shadow: 5px 22px grey;
-	}
-	
-	
+
+}
+
+/* edit what you want with max screen that won't show on small screens */
+@media(min-width:680px){
 	#gallery #column-5{
 		position: relative;
-	}
+		left: 24%;
+		top: 2.5vh;
+	}	
 
-	/* edit mobile view here */
-	@media(max-width:780px){
-		#gallery .img-circle,.img-responsive{
-			width: 80%;
-			margin: auto;
-		}
-		#main-footer{
-			display: none;
-		}
-
-
-	}
-
-	/* edit what you want with max screen that won't show on small screens */
-	@media(min-width:680px){
-		#gallery #column-5{
-			position: relative;
-			left: 24%;
-			top: 2.5vh;
-		}	
-
-		#gallery #column-7{
-			position: relative;
-			right: 24%;
-			top: 2.5vh;
-		}	
-
-
-	}
-
-	img[alt='Contact Photo']{
-		height: fit-content;
+	#gallery #column-7{
 		position: relative;
-		width: 1500px;
-	}
+		right: 24%;
+		top: 2.5vh;
+	}	
+
+
+}
+
+img[alt='Contact Photo']{
+	height: fit-content;
+	position: relative;
+	width: 1500px;
+}
 
 
 
@@ -124,55 +125,55 @@
 
 
 
-	
-
-	
-
-	/* #j-aboutme{
-		border-radius: 20px;
-		border: 10px solid tiger;
-		background-color: hsla(14, 100%, 53%, 0.6);
-	}
-
-	#j-aboutme > h1, p {
-		color: #fff;
-	}
-
-	#j-aboutme-well{
-		background-color:orange;
-		} */
-
-		textarea {
-			overflow-y: scroll;
-			resize: none;
-			background: #000;
-		}
-
-		.col-sm-6 #contact-secondcolumn{
-			background:#000;
-		}
-
-		#contactme{
-			margin: auto;
-
-		}
-
-		#contactme > h1{
-			text-align: center;
-			padding-bottom: 10px;
-		}
-
-		.form-group-sm{
-			padding: 10px;
-		}
 
 
-		.bigSpace{
-			height: 70vh;
-		}
-		.smallSpace{
-			height: 15vh;
-		}
+
+
+/* #j-aboutme{
+border-radius: 20px;
+border: 10px solid tiger;
+background-color: hsla(14, 100%, 53%, 0.6);
+}
+
+#j-aboutme > h1, p {
+color: #fff;
+}
+
+#j-aboutme-well{
+background-color:orange;
+} */
+
+textarea {
+	overflow-y: scroll;
+	resize: none;
+	background: #000;
+}
+
+.col-sm-6 #contact-secondcolumn{
+	background:#000;
+}
+
+#contactme{
+	margin: auto;
+
+}
+
+#contactme > h1{
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.form-group-sm{
+	padding: 10px;
+}
+
+
+.bigSpace{
+	height: 70vh;
+}
+.smallSpace{
+	height: 15vh;
+}
 
 
 
@@ -202,6 +203,18 @@
 }
 .navbar-wrapper .navbar .container {
 	width: auto;
+}
+
+.navbar-inverse{
+	border-color: none;
+	background-color: #000;
+}
+
+
+#main-navbar{
+	position: fixed;
+	width: 100%;
+	z-index: 100;
 }
 
 
