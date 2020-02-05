@@ -14,9 +14,40 @@
 
 
 
+
+
 	body{
-		background:lightgrey;
-		/* margin: 0px; */
+		background: url("../images/try-background3.jpg") rgba(0,0,0,.5);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		font-size: 15px;
+		font-weight: bold;
+		color: #000;
+		font-weight: bold;
+
+	}
+
+	.section-headers{
+		font-size: 81px;
+		color: #fff;
+	}
+
+	.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover{
+		background-color: #F2A65A;
+		color:#000
+	}
+
+	.navbar-inverse{
+		border-color:#964000;
+	}
+
+
+
+	#nav-logo{
+		position: relative;
+		right: 289px;
 	}
 
 
@@ -28,6 +59,20 @@
 		padding: 0px;
 	}
 
+
+	.nav > li > a:hover{
+		color:#fff;
+	}
+
+	.navbar-inverse{
+		background-color: rgba(242,102,9);
+		border-color:#964000;
+	}
+
+	.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover{
+		color:#000;
+		background-color:#fff;
+	}
 
 	#main-carousel{
 		padding: 0px;
@@ -50,6 +95,11 @@
 		margin-top: 10px;
 		text-align: center;
 	}
+
+	.modal-dialog{
+		margin-top: 29vh;
+	}
+
 
 	#gallery{
 		text-align:center;
@@ -172,7 +222,7 @@ textarea {
 	height: 70vh;
 }
 .smallSpace{
-	height: 15vh;
+	height: 20vh;
 }
 
 
@@ -215,6 +265,7 @@ textarea {
 	position: fixed;
 	width: 100%;
 	z-index: 100;
+	background-color: rgba(242,102,9);
 }
 
 
@@ -259,6 +310,12 @@ textarea {
 	font-size: 14px;
 }
 
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover{
+	background-color: #F2A65A;
+	color: #000;
+}
+
+
 #main-footer > .well > .row > .col-sm-2{
 	position: relative;
 	top: 40px;
@@ -266,6 +323,10 @@ textarea {
 
 #gobacktop-icon{
 	font-size: 30px;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+	color: white;
 }
 
 
@@ -325,9 +386,10 @@ textarea {
 
 #main-footer{
 	padding: 15px 15px 0px 15px;
-	background: black;
+	background: rgba(242,102,9);
 	color: #fff;
 }
+
 
 
 
