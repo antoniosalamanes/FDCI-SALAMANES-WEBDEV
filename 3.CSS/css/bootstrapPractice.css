@@ -1,55 +1,40 @@
-/* .navbar-inverse .navbar-nav > .active > a{
-
+.navbar-inverse .navbar-nav > .active > a{
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
 }
 
 .navbar-inverse .navbar-nav > .active > a:hover{
 
-	} */
+}
 
-	.navbar-inverse .navbar-nva > .active > a:focus{
-		background-color: rgba(0, 0, 0, 0.5);
-		color: #fff;
-	}
-
-
-
-	#first-carousel-image{
-		height:100%;
-	}
-
-	#second-carousel-image{
-
-		height:100%;
-	}
-
-	#third-carousel-image{
-
-		height:100%;
-	}
-
-	img[src='images/eat.png'],img[src='images/sleep.png'],img[src='images/dota.png']{
-position:relative;
-bottom:20px;
-border: 10px solid rgba(0, 0, 0, 0.5);
+.navbar-inverse .navbar-nva > .active > a:focus{
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
 }
 
 
-/* #first-carousel-image{
-width:1902px;
-height:500px;
+#first-carousel-image{
+	height:100%;
 }
 
 #second-carousel-image{
-width:1902px;
-height:500px;
+
+	height:100%;
 }
 
 #third-carousel-image{
-width:1902px;
-height:500px;
-}  */
+
+	height:100%;
+}
+
+img[src ='images/eat.png'],img[src='images/sleep.png'],img[src='images/dota.png']{
+	position:relative;
+	bottom:20px;
+	border: 10px solid rgba(0, 0, 0, 0.5);
+}
+
 body{
-	/* background: url("../images/try-background3.jpg") rgba(0,0,0,.5); */
+	
 	-webkit-background-size: cover;
 	font-family: Century Gothic;
 	-moz-background-size: cover;
@@ -110,8 +95,6 @@ body{
 	background-color:#fff;
 }
 
-.dropdown-toggle{
-}
 
 #main-carousel{
 	padding: 0px;
@@ -122,7 +105,7 @@ body{
 	font-family: Verdana;
 	color: yellow;
 	font-weight: bold;
-	background-color: /* hsla(14, 100%, 53%, 0.6); */#f2f2f2;
+	background-color: #f2f2f2;
 }
 
 .carousel .item {
@@ -141,12 +124,10 @@ body{
 }
 
 #interests-well-1, #interests-well-2, #interests-well-3{
-	/* background-color: hsla(14, 100%, 53%, 0.6); */
 	background-color: rgba(0, 0, 0, 0.5);
 	border: none;
 }
 #interests-well-1, #interests-well-2, #interests-well-3,  h1{
-	/* background-color: hsla(14, 100%, 53%, 0.6); */
 	color: #fff;
 	font-weight: 400;
 }
@@ -219,10 +200,16 @@ body{
 
 }
 
-img[alt='Contact Photo']{
-	height: fit-content;
+img[alt ='Contact Photo']{
 	position: relative;
+	height:500px;
+	border-radius: 10px;
 	width: 1500px;
+}
+
+.form-group-sm .form-control {
+	font-size: 18px!important;
+
 }
 
 .control-label{
@@ -258,11 +245,6 @@ img[alt='Contact Photo']{
 }
 
 
-
-
-
-
-
 textarea {
 	overflow-y: scroll;
 	resize: none;
@@ -271,6 +253,12 @@ textarea {
 
 .col-sm-6 #contact-secondcolumn{
 	background:#000;
+}
+
+#contact-form{
+	border: 15px solid #707070;
+	box-shadow: 4px 10px #000;
+	border-radius: 20px;
 }
 
 #contactme{
@@ -325,15 +313,30 @@ textarea {
 	width: auto;
 }
 
+dropdown-toggle.dropdown-toggle
 
 
 
-#dropdown-toggle{
-	background-color: rgba(0, 0, 0, 0.5);
+.dropdown-toggle {
+	color: #fff;
+	background-color:rgba(0, 0, 0, 0.5);
+}
+
+#dropdown-toggle {
+	color: #fff;
+	background-color:rgba(0, 0, 0, 0.5);
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover {
+	background-color: #000;
 	color: #fff;
 }
 
 
+
+.navbar-nav > li > .dropdown-menu {
+	background-color:rgba(0, 0, 0, 0.5);
+}
 
 
 
@@ -341,9 +344,12 @@ textarea {
 	position: fixed;
 	width: 100%;
 	z-index: 100;
-	/* background-color: rgba(242,102,9); */
-	/* background-color: #000; */
 	background-color:rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+	color: #fff;
+	text-decoration: none;
 }
 
 
@@ -354,6 +360,7 @@ textarea {
 .carousel-caption {
 	z-index: 10; 
 }
+
 
 
 .carousel-inner > .item > img {
@@ -371,12 +378,14 @@ textarea {
 }
 
 
+
 #main-footer{
 	margin: 0px;
 	padding: 0px;
 	position: relative;
 	top: 190px;
 	height: 91px;
+	border: none;
 }
 
 #main-footer > .well > .row > .col-sm-2 > small {
@@ -387,6 +396,8 @@ textarea {
 	background-color: #F2A65A;
 	color: #000;
 }
+
+a{color:#fff!important;}
 
 
 #main-footer > .well > .row > .col-sm-2{
@@ -403,8 +414,11 @@ textarea {
 #gobacktop{
 	font-weight: bold;
 	color: #fff;
-	text-shadow: 5px 22px #202020;
+	text-shadow: none;
+	position: relative;
+	right: 5vh;40px;  /* if Browser doesn't support (VH) */
 }
+
 
 .navbar-inverse .navbar-nav > li > a{
 	color: white;
@@ -431,6 +445,10 @@ textarea {
 	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
 	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	height: 37px;
+	width: 13%;
+	font-size: 41px;
+	border-radius:11px
 }
 
 .fa-facebook{
@@ -441,6 +459,7 @@ textarea {
 	border-radius: 5px;
 	width: 16%;
 	text-align: right;
+	height: 35px;
 }
 
 #privacy,#terms,#gobacktop{
@@ -470,12 +489,3 @@ textarea {
 	background: rgba(0, 0, 0, 0.5);
 	color: #fff;
 }
-
-
-
-
-
-
-/* TEST */
-
-
