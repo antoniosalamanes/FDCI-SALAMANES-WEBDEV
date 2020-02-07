@@ -73,6 +73,18 @@ body{
 #nav-logo{
 	position: relative;
 	right: 289px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif!important;
+	text-shadow: -18px 9px 6px #000000;
+	font-size: 40px;
+	letter-spacing: -1.2px;
+	word-spacing: 0.4px;
+	color: white!important;
+	font-weight: 700;
+	text-decoration: none solid rgb(68, 68, 68);
+	font-style: normal;
+	font-variant: normal;
+	text-transform: capitalize;
+	border-radius: 10px;
 }
 
 
@@ -578,5 +590,5 @@ a{color:#fff!important;}
 }
 
 .copyright{
-    font-size: 67%!important;
+	font-size: 67%!important;
 }
