@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JS Tutorial ft. Bebs</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta http-equiv="refresh" content="1">; -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <style>
+    #first-container {
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+
+    #second-container {
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+
+    #calc{
+     border: 1px solid black;
+     border-radius: 20px;
+   }
+
+    .bigSpace{
+      height: 20vh;
+    }
+
+
+ </style>
+
+</head>
+<body>
+
+ <div class="container-fluid bg-info p-3">
+  <header>
+    <h1 class="text-center text-white font-weight-bold display-4"> Javascript Activity 3 </h1>
+  </header>
+</div>
+
+
+<div class="container mx-auto mt-5" id="first-container">
+  <main class="container mt-5">
+    <form class="form-inline font-weight-bold" id="form" action="#">
+
+      <div class="form-group">
+        <label for="name" class="mb-2 mr-sm-2">Name:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="name" placeholder="Input name" required pattern="[0-9a-zA-Z_.-]*" required>
+      </div>
+
+      <div class="form-group">
+        <label for="age" class="mb-2 mr-sm-2">Age:</label>
+        <input type="number" class="form-control mb-2 mr-sm-2" id="age" placeholder="Input age" required>
+      </div>
+
+      <button type="submit" class="btn btn-danger mb-2">ADD</button>
+    </form>
+  </main>
+
+  <section class="container mt-5 p-3" id="final-object">
+    <h2>Final Object:</h2>
+  </section>
+
+  <section class="container mt-5 p-3" id="readable-format">
+    <h2>Readable Format:</h2>
+  </section>
+</div>
+
+
+
+
+
+<div class="container mx-auto mt-5 p-3" id="second-container">
+  <h2> Product Inventory </h2>
+  <form action="#" id="form-2" class="font-weight-bold">
+    <div class="form-group">
+      <label for="name2">Name</label>
+      <input type="text" class="form-control" id="name2" required>
+    </div>
+
+
+    <div class="form-group">
+      <label for="stocks">Stocks</label>
+      <input type="number" class="form-control" id="stocks" required>
+    </div>
+
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="text" class="form-control" id="price" required>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-danger btn-sm">ADD</button>
+    </div>
+  </form>
+
+ <h3>Product List</h3>
+  <div id="product-list">
+  </div>
+
+  
+  <div class="container">
+    <button class="btn btn-info btn-sm mt-3" id="calc">Calculate for total value for each product</button>
+  </div>
+
+
+  <div class="container mt-3" id="totalValue"><h3>Product Total Value:</h3>
+  </div>
+
+
+  
+</div>
+
+
+<div class="bigSpace"></div>
+
+
+
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="./assets/js/Activity3.js"></script>
+
+
+</body>
+</html>
