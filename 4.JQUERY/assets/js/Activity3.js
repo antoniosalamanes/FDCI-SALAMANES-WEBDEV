@@ -1,7 +1,6 @@
-var sum = [];
+var sum = 0;
 var arr = [];
 var arr2 = [];
-var total = 0;
 //Part 1
 
 //Add 'submit' Event listener to the form
@@ -64,20 +63,24 @@ function addProduct (e) {
 	arr2.push(product);
 	// console.log(arr2);
 
-
+	var text2 = "";
 	for(let x in arr2){
-		plist.html(`<b>Name:</b> <code>${arr2[x].n}</code>  <b>Stock(s):</b> <code>${arr2[x].s}</code>  <b>Price:</b> <code>${arr2[x].p}</code> <br>`)
+		text2 += `<b>Name:</b> <code>${arr2[x].n}</code>  <b>Stock(s):</b> <code>${arr2[x].s}</code>  <b>Price:</b> <code>${arr2[x].p}</code> <br>`;
 	}
-	console.log(arr2);
-
+	plist.html(text2);
+	// console.log(arr2);
+	var text3 = "";
+	var total = [];
 	$('#calc').on('click', function(){
 		for(var x in arr2){
-
 			calc = (arr2[x].s) * (arr2[x].p);
-			sum.push(calc);
-			console.log(sum);
-			tval.html(`<code>${arr2[x].n}</code> will have a total value of <code>${calc}.</code>  <br>`);
+			text3 += `<code>${arr2[x].n}</code> will have a total value of <code>${calc}.</code>  <br>`;
 		}
+			sum += calc;
+		tval.html(text3);
+		$('#prodValue').html(`<h3>Product Total Value </h3><strong> <code> ${sum} </code> </strong>`);
+	// const product = total.forEach((x)=> total+=sum);
+		// tval.html(product);
 		
 });
 };
