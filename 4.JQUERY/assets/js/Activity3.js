@@ -1,6 +1,7 @@
-
-
-
+var sum = [];
+var arr = [];
+var arr2 = [];
+var total = 0;
 //Part 1
 
 //Add 'submit' Event listener to the form
@@ -18,32 +19,31 @@ function addAdditionalObj (e) {
 	var final = $('#final-object');
 	var readable = $('#readable-format');
 
-	//declare empty array
-	var arr = [];
+
 	//declare empty object
-	var person = {};
-
-	//assign the inputs to the object keys
-	person.name = name;
-	person.age = age;
+	var person = {
+		name: name,
+		age: age,
+	};
 	//push the values to the array
+
 	arr.push(person);
-	console.log(person);
+	console.log(arr);
 
-	//append in JSONized format
-	final.append(JSON.stringify(arr, null , 4));
-
+	// JSONized format
+	final.html(JSON.stringify(arr, null , 4));
 	//append as in readable format
+	var text = "";
 	for (let x  in arr){
-		readable.append(`Name: ${arr[x].name} , Age: ${arr[x].age} <br>`)
+		text += `Name: ${arr[x].name} , Age: ${arr[x].age} <br>`;
 	}
+	readable.html(text);
 }
 
 
 
 
 //Part 2
-
 $('#form-2').on('submit', addProduct);
 
 function addProduct (e) {
@@ -55,33 +55,31 @@ function addProduct (e) {
 	var tval = $('#totalValue');
 	var plist = $('#product-list');
 
-	var arr = [];
-	var product = {};
-	product.n = name;
-	product.s = stock;
-	product.p = price;
-	arr.push(product);
+	var product = {
+		n:name,
+		s:stock,
+		p:price
+	};
+
+	arr2.push(product);
+	// console.log(arr2);
 
 
-
-	var total = 0;
-	var sum = 0;
-	var calc = stock * price;
-	total = total + calc;	
-	
-
-	for(let x in arr){
-		plist.append(`<b>Name:</b> <code>${arr[x].n}</code>  <b>Stock(s):</b> <code>${arr[x].s}</code>  <b>Price:</b> <code>${arr[x].p}</code> <br>`)
+	for(let x in arr2){
+		plist.html(`<b>Name:</b> <code>${arr2[x].n}</code>  <b>Stock(s):</b> <code>${arr2[x].s}</code>  <b>Price:</b> <code>${arr2[x].p}</code> <br>`)
 	}
+	console.log(arr2);
 
 	$('#calc').on('click', function(){
-		for(var x in arr){
-			calc = (arr[x].s) * (arr[x].p);
-			tval.append(`<code>${arr[x].n}</code> will have a total value of <code>${calc}.</code>  <br>`);
-			total = total + calc;
-			console.log(total);
-			//can't display the total, I give up, the value keeps on reassigning the keyvalue pairs.
+		for(var x in arr2){
+
+			calc = (arr2[x].s) * (arr2[x].p);
+			sum.push(calc);
+			console.log(sum);
+			tval.html(`<code>${arr2[x].n}</code> will have a total value of <code>${calc}.</code>  <br>`);
 		}
+		
 });
 };
 
+console.log('Hey');
