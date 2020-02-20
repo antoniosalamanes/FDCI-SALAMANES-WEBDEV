@@ -59,7 +59,7 @@ function submitProfile(e){
 		third.html(`Your hobbies are ${allChecked}`);
 		fourth.html(`Here's a little fact about your self: ${aboutme.val()}`);
 
-		// form.hide();
+		form.hide();
 
 
 	}
