@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JS Tutorial ft. Bebs</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1">
+  <!-- <meta http-equiv="refresh" content="1">; -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<div class="container-fluid bg-info p-2 mb-5">
+  <header>
+    <h1 class="text-center text-white font-weight-bold display-4"> Javascript Activity 4 </h1>
+  </header>
+</div>
+
+<div id="error"></div>
+
+<div class="container-fluid mx-auto w-50">
+  <h1>Profile</h1>
+  <form id="form">
+    <div class="form-group">
+      <label for="name"><strong>What's your name?</strong></label>
+      <input type="text" class="form-control" id="name" placeholder="Please enter your name...">
+    </div>
+
+    <div class="form-group">
+      <label for="gender"><strong>Gender</strong></label>
+      <select class="custom-select" id="gender">
+        <option selected value="Male"> Male </option>
+        <option value="Female"> Female </option>
+        <option value="Others"> Others </option>
+      </select>
+    </div>
+
+    <div class="form-group mt-5" id="checkboxgroup">
+      <small class="small form-text text-muted">Select atleast 3</small>
+      <div class="form-check">
+        <label class="form-check-label" for="check1">
+          <input type="checkbox" class="form-check-input" value ="Singing" id="check1">Singing
+        </label>
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label" for="check2">
+          <input type="checkbox" class="form-check-input" value ="Dancing" id="check2">Dancing
+        </label>
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label" for="check3">
+          <input type="checkbox" class="form-check-input" value ="Traveling" id="check3">Traveling
+        </label>
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label" for="check4">
+          <input type="checkbox" class="form-check-input" value ="Reading" id="check4">Reading
+        </label>
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label" for="check5">
+          <input type="checkbox" class="form-check-input" value ="Programming" id="check5">Programming
+        </label>
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label" for="check6">
+          <input type="checkbox" class="form-check-input" value ="Daydreaming" id="check6">Daydreaming
+        </label>
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label" for="check7">
+          <input type="checkbox" class="form-check-input" value ="Sleeping" id="check7">Sleeping
+        </label>
+      </div>
+    </div>
+    <div class="wew">
+      <button type="button" id="hobby" class="btn btn-info">Add Hobby</button>
+    </div>
+    
+    <div class="form-group" id="addhobbies">
+      <input type="text" class="form-control" id="addHobbyText" placeholder="Enter a hobby...">
+      <button type="button" class="btn btn-info" id="saveMe"> SAVE </button>
+    </div>
+
+
+    <div class="form-group mt-5" id="textarea">
+      <label for="textarea">Tell me a little thing about yourself</label>
+      <textarea class="form-control" maxlength ="20" id="textarea" rows="3"></textarea>
+      <label for="max">0/20</label>
+    </div>
+
+    <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+</div>
+
+
+
+
+<div class="container" id="result">
+  <p id="n"></p>
+  <p id="g"></p>
+  <p id="h"></p>
+  <p id="a"></p>
+  <button type="button" class="btn btn-info" id="goOver">Go over</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="./assets/js/Activity4.js"></script>
+
+
+</body>
+</html>
