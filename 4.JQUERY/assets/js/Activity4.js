@@ -18,7 +18,7 @@ var goOver = $('#goOver');
 var hobbyval = $('#addHobbyText');
 
 
-//Hide the form onload
+//Hide on load
 $(window).on('load', function(){
 	addhobbybtn.hide();
 	goOver.hide();
@@ -35,7 +35,6 @@ function submitProfile(e){
 	let gval = gender.val();
 	let checkedboxes = $('input[type="checkbox"]:checked');
 	let cb = $('input[type="checkbox"]')
-	let c = $('input[type="checkbox"]');
 	let max = $('label[for="max"]');
 	let submit = $('#submit');
 	let regex = /^[A-Za-z0-9 ]+$/;
@@ -43,19 +42,14 @@ function submitProfile(e){
 
 
 //if name && checkedboxes are null / undefined / blanked
-if(!nval || !checkedboxes || !aboutme || !hobbyval){
+if(!nval || checkedboxes < 3 || !aboutme.val() || !hobbyval){
 	errorMessage('Please input the required fields for the following!');
 	$('#name').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
-	$('input[type="checkbox"]').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
+	$('#checkboxgroup').children().focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
 	$('textarea#textarea').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
 	$('#addHobbyText').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
 	return false;
 }
-
-cb.each(function(index, el) {
-	
-});
-
 
 
 
@@ -73,13 +67,6 @@ if(checkedboxes.length <= 0){
 	return false;
 }
 
-
-if(!aboutme){
-	errorMessage('Please input the required fields for the textarea section!');
-	$('textarea#textarea').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
-	return false;
-}
-
 if(!nval){
 	errorMessage('Please input the required fields for the name!');
 	$('#name').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
@@ -93,11 +80,6 @@ if(!hobbyval){
 }
 
 //if name contains special characters
-
-
-
-
-
 if(!isValid){
 	alert(`${addHobby} contains special characters`);
 	errorMessage('&nbsp;Beware of special characters!!!');
@@ -105,21 +87,24 @@ if(!isValid){
 	return false;
 }
 
+
+isValid = regex.test(aboutme.val());
 if(!isValid){
-	alert(`${aboutme.val()} contains special characters`);
+	alert(` ${aboutme.val()} contains special characters`);
 	errorMessage('&nbsp;Beware of special characters!!!');
-	$('#addHobbyText').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
+	$('textarea#textarea').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
 	return false;
 }
 
 
+//checked checkboxes are evaluated
 if (checkedboxes.length < 3){
 
 	errorMessage('Please select atleast 3 hobbies!');
 	return false;
 }
 
-
+// accumulated hobbies are inserted to a blank string
 let allChecked = ' ';
 checkedboxes.each(function(e){
 	allChecked += ',' + $(this).val();
@@ -129,36 +114,25 @@ result.css({"border": "3px solid black",
 	"border-radius": "5px",
 	"border-color": "dodgerblue",
 	"background-color": "paleturquoise","padding":"5px"});
+
+//show button for redo
 goOver.show();
 
-
-
-
-
-
+//Results insertion
 first.html(`Hi <strong>${nval}</strong>`);
-
-
 
 second.html(`Your gender is <strong>${gval}</strong>`);
 
-
-
-
 third.html(`Your hobbies are ${allChecked}`);
-
-
-
 
 fourth.html(`Here's a little fact about your self: ${aboutme.val()}`);
 
+//hide the form
 form.hide();
-
 
 }
 
 console.warn(`JS Connection successful!`);
-
 
 
 
@@ -172,7 +146,6 @@ saveMe.on('click', function(e){
 	console.log("success!");
 
 })
-
 
 
 hobby.on('click',function(e) {
@@ -193,62 +166,14 @@ goOver.on('click', function(){
 })
 
 
-
-
-	// function errorMessage(str){
-	// 	error.append(str);
-	// 	error.addClass('alert alert-danger alert-dismissible fade show');
-	// 	error.html(str)
-	// }
-
-
-
 //UTILITIES SECTION
 
 //errorMessage
 function errorMessage(str){
 	let error = $(`.error`);
 	error.addClass(`alert alert-danger alert-dismissible fade show`);
-	error.append(str);
+	error.html(str);
 };
-
-
-// //Restrict input of non numeric characters to Price, Age, and Stocks(accepts decimal)
-// $('#price').on("keypress keyup blur", function (event) {
-// 	this.value = this.value.replace(/[^0-9\.]/g,'');
-// 	$(this).val($(this).val().replace(/[^0-9\.]/g,''));
-// 	if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
-// 		event.preventDefault();
-// 	}
-// });
-
-
-// $('#age').on("keypress keyup blur", function(event) {
-// 	$(this).val($(this).val().replace(/[^\d].+/, ""));
-// 	if ((event.which < 48 || event.which > 57)) {
-// 		event.preventDefault();
-// 	}
-// });
-
-// $('#stocks').on("keypress keyup blur", function(event) {
-// 	$(this).val($(this).val().replace(/[^\d].+/, ""));
-// 	if ((event.which < 48 || event.which > 57)) {
-// 		event.preventDefault();
-// 	}
-// });
-
-
-
-// $('#name').keydown(function (e) {
-// 	if (e.shiftKey || e.ctrlKey || e.altKey) {
-// 		e.preventDefault();
-// 	} else {
-// 		let key = e.keyCode;
-// 		if (!((key == 8) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
-// 			e.preventDefault();
-// 		}
-// 	}
-// });
 
 $('input[type="checkbox"]:checked').click( function(){
 	$(this).parent('label').toggleClass('highlight', this.checked);
