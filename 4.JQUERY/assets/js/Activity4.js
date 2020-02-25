@@ -16,12 +16,13 @@ var fourth = $(`.container>p#a`);
 var result = $('#result');
 var goOver = $('#goOver');
 var gval = $('#gender').val();
+var error = $('.error');
 
 
 //Hide on load
 $(window).on('load', function(){
-	addhobbybtn.toggle();
-	goOver.toggle();
+	addhobbybtn.hide();
+	goOver.hide();
 });
 
 
@@ -37,21 +38,27 @@ function submitProfile(e){
 	let max = $('label[for="max"]');
 	let submit = $('#submit');
 	let regex = /^[A-Za-z0-9 ]+$/;
-	let isValid = regex.test(nval);
 
-
-//if name && checkedboxes are null / undefined / blanked
-if(!nval || checkedboxes < 3 || !aboutme.val()){
+//if everything is blanked
+if(!nval && checkedboxes.length < 3 && !aboutme.val()){
 	errorMessage('Please input the required fields for the following!');
 	$('#name').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
-	$('#checkboxgroup').children().focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
+	$('.small').focus().css({"border":"1px solid red" , 'box-shadow':'coral l3px 4px' , 'width':'10%'});
 	$('textarea#textarea').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
 	$('#addHobbyText').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
 	return false;
 }
 
+//if name is null/undefined
+if(!nval){
+	errorMessage('Please input the required fields for the name!');
+	$('#name').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
+	return false;
+}
 
 
+//if name contains special characters
+let isValid = regex.test(nval);
 if(!isValid){
 	alert(`${nval} contains special characters`);
 	errorMessage('&nbsp;Beware of special characters!!!');
@@ -60,13 +67,14 @@ if(!isValid){
 }
 
 
-if(!nval){
-	errorMessage('Please input the required fields for the name!');
-	$('#name').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
+//if "aboutyourself" is blanked/nulled/undefined
+if(!aboutme.val()){
+	errorMessage('Please tell us about yourself!!!');
+	$('#textarea#textarea').focus().css({"border-color":"red" , 'box-shadow':'coral l3px 4px'});
 	return false;
 }
 
-
+//if "aboutyourself" section contains special characters
 isValid = regex.test(aboutme.val());
 if(!isValid){
 	alert(` ${aboutme.val()} contains special characters`);
@@ -76,10 +84,11 @@ if(!isValid){
 }
 
 
+
 //checked checkboxes are evaluated
 if (checkedboxes.length < 3){
 	errorMessage('Please select atleast 3 hobbies!');
-	$('.small').focus().css({"border":"1px solid red" , 'box-shadow':'coral l3px 4px'});
+	$('.small').focus().css({"border":"1px solid red" , 'box-shadow':'coral l3px 4px' , 'width':'10%'});
 	return false;
 }
 
@@ -89,7 +98,7 @@ checkedboxes.each(function(){
 	allChecked += ',' + $(this).val();
 })
 
-
+//inserting the values
 appendToResult(first,`<code> Hi </code> <strong>${nval}</strong>`);
 appendToResult(second,`<code> Your gender is </code> <strong> ${gval} </strong>`);
 appendToResult(third,`<code> Your hobbies are </code> <strong> ${allChecked} </strong>`);
@@ -101,17 +110,17 @@ result.css({"border": "3px solid black",
 	"border-color": "dodgerblue",
 	"background-color": "paleturquoise","padding":"5px"});
 
-form.fadeToggle();
+//hide form
+form.slideUp();
 
-
+//hide error messages
+error.fadeToggle();
 
 //show button for redo
 goOver.fadeToggle();
-// goOver.show();
-
 }
 
-console.warn(`JS Connection successful!`);
+
 
 
 
@@ -143,14 +152,14 @@ saveMe.on('click', function(e){
 
 })
 
-
+//toggle Add Hobbies section
 hobby.on('click',function(e) {
 	addhobbybtn.show();
 	hobby.hide();
 	console.log(`success!`);
 });
 
-
+//count the length of keys pressed
 aboutme.on('keyup', function()
 {
 	maxCount.html(`${this.value.length}/20`); 
@@ -173,17 +182,13 @@ function errorMessage(str){
 	error.html(str);
 };
 
+//result inserter
 function appendToResult(container, str) {
 	container.html(str)
 }
 
-// $('#addHobbyText').keydown(function (e) {
-// 	if (e.shiftKey || e.ctrlKey || e.altKey) {
-// 		e.preventDefault();
-// 	} else {
-// 		let key = e.keyCode;
-// 		if (!((key == 8) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
-// 			e.preventDefault();
-// 		}
-// 	}
-// });
+
+
+
+
+console.warn(`JS Connection successful!`);
