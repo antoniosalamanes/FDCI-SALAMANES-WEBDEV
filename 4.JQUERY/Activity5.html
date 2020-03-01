@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JS Tutorial ft. Bebs</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1">
+  <!-- <meta http-equiv="refresh" content="1">; -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <style>
+   body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6em;
+    font-size: 1.6em;
+  }
+
+  h3{
+    color: #FF0000;
+  }
+
+  .questions > li{
+    text-decoration: underline;
+  }
+
+  .space{
+    height: 15vh;
+  }
+
+  .box{
+    border: 4px solid #6B5B95;
+    background: #9370DB;
+    height: 150px;
+    width: 150px;
+    position: relative;
+  }
+  .box-2{
+    background: #9370DB;
+    height: 150px;
+    width: 150px;
+    position: relative;
+  }
+
+  #note{
+    font-size: 0.8em;
+  }
+</style>
+</head>
+<body>
+  <div class="container-fluid bg-info p-2">
+    <header>
+      <h1 class="text-center text-white font-weight-bold display-4"> Javascript Activity 5 </h1>
+    </header>
+  </div>
+
+
+
+  <div class="container p-2 mt-5">
+    <h3 class="font-weight-bolder"> PART 1 </h3>
+    <ul class="questions">
+     <li>
+      <a href="#" id="first">First question?</a>
+    </li>
+    <p class="answers">This is the first answer.</p>
+
+    <li>
+      <a href="#" id="second">Second question?</a>
+    </li>
+    <p class="answers">This is the second answer.</p>
+
+
+    <li>
+      <a href="#" id="third">Third question?</a>
+    </li>
+    <p class="answers">This is the third answer.</p>
+
+  </ul>
+
+  <div class="space"></div>
+
+  <h3 class="font-weight-bolder"> PART 2 </h3>
+  <button type="button" id="start" class="btn btn-primary btn-sm rounded-lg">Start Animation </button>
+  <button type="button" id="reset" class="btn btn-warning btn-sm rounded-lg">Reset Animation </button>
+  <div class="box mt-4"></div>
+
+  <div class="space"></div>
+
+
+  <h3 class="font-weight-bolder"> PART 3 </h3>
+  <button type="button" id="start2" class="btn btn-primary btn-sm rounded-lg">Start Animation </button>
+  <button type="button" id="rewind" class="btn btn-secondary btn-sm rounded-lg">Rewind Animation </button>
+  <button type="button" id="reset2" class="btn btn-warning btn-sm rounded-lg">Reset Animation </button>
+  <p class="mt-4" id="note">
+    <strong>Note:</strong> <i>"Start Animation"</i> button multiple times to see how the relative works.
+  </p>
+  <div class="box-2 mt-4"></div>
+
+  <div class="space"></div>
+
+</div>
+
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+
+  //Part 1
+
+  //hide the answers on document ready
+  $('p.answers').hide();
+
+  //attach event delegation to hyperlinks
+  $('a').on('click', function(e){
+    $(e.currentTarget).parent().next().slideToggle();
+  })
+
+// IF ( <p> !== CLICKED PARAGRAPH ) => SLIDE/HIDE 
+$('#first').on('click', ()=>{
+  $('p:nth-child(4)').slideUp();
+  $('p:nth-child(6)').slideUp();
+})
+$('#second').on('click', ()=>{
+  $('p:nth-child(2)').slideUp();
+  $('p:nth-child(6)').slideUp();
+})
+$('#third').on('click', ()=>{
+  $('p:nth-child(2)').slideUp();
+  $('p:nth-child(4)').slideUp();
+})
+
+
+//Part 2
+$('#start').on('click', ()=>{
+  //animate chaining
+  $('.box').
+  animate({width: '400px'}, 500).
+  animate({height: '400px'}, 500).
+  animate({right: '-200px'}, 500).
+  animate({borderWidth: '15px'},500, 
+          function(){
+    //perform callback after animation
+    $(this).css({"opacity":"0.5"});
+  })
+});
+
+$('#reset').on('click', ()=> location.reload());
+
+
+//Part 3
+//move right, bottom, increase width and height every click...
+$('#start2').on('click', ()=> { $('.box-2').animate({right: '-=50px', bottom: '-=50px',width: '+=100px', height: '+=100px'}), 500 });
+
+//move left, top, decrease width and height every click...
+$('#rewind').on('click', ()=> { $('.box-2').animate({left: '-=50px', bottom: '+=50px', width: '-=100px', height: '-=100px'}), 500 });
+
+$('#reset2').on('click', ()=> location.reload());
+});
+
+</script>
+</body>
+</html>
